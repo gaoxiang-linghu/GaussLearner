@@ -100,8 +100,8 @@ page='''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GaussLearner: 3D Gaussian Primitives as Self-Regulating Continual Learners</title>
 <meta name="description" content="GaussLearner: 3D Gaussian Primitives as Self-Regulating Continual Learners. Gaoxiang Linghu, Haonan Zhou, Xuanhe Liu, Weili Xu, Kaiyue Zhou, Jun Xiao, and Gaoang Wang.">
-<meta property="og:type" content="website"><meta property="og:title" content="GaussLearner"><meta property="og:description" content="3D Gaussian Primitives as Self-Regulating Continual Learners"><meta property="og:image" content="https://leo4384509.github.io/GaussLearner/assets/figures/teaser.webp"><meta property="og:url" content="https://leo4384509.github.io/GaussLearner/">
-<meta name="theme-color" content="#ffffff"><link rel="canonical" href="https://leo4384509.github.io/GaussLearner/"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
+<meta property="og:type" content="website"><meta property="og:title" content="GaussLearner"><meta property="og:description" content="3D Gaussian Primitives as Self-Regulating Continual Learners"><meta property="og:image" content="https://gaoxiang-linghu.github.io/GaussLearner/assets/figures/teaser.webp"><meta property="og:url" content="https://gaoxiang-linghu.github.io/GaussLearner/">
+<meta name="theme-color" content="#ffffff"><link rel="canonical" href="https://gaoxiang-linghu.github.io/GaussLearner/"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
 <body><a class="skip-link" href="#main">Skip to content</a>
 <header class="hero container">
 <h1><span class="project-name">GaussLearner</span><span class="paper-title">3D Gaussian Primitives as<br class="desktop-break"> Self-Regulating Continual Learners</span></h1>

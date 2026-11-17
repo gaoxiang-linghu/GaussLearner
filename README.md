@@ -4,7 +4,7 @@ Static website for **GaussLearner: 3D Gaussian Primitives as Self-Regulating Con
 
 ## Visibility
 
-The repository leo4384509/GaussLearner is private. Public deployment is disabled. The GitHub Pages workflow is removed, and scripts/publish_github.sh stops immediately without changing GitHub or uploading files. Keep this state until the owner explicitly requests publication.
+The repository gaoxiang-linghu/GaussLearner is private. Public deployment is disabled. The GitHub Pages workflow is removed, and scripts/publish_github.sh stops immediately without changing GitHub or uploading files. Keep this state until the owner explicitly requests publication.
 
 ## Preview
 
