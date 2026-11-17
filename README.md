@@ -1,9 +1,10 @@
-# GaussLearner project page
+# GaussLearner — private preview
 
 Static website for **GaussLearner: 3D Gaussian Primitives as Self-Regulating Continual Learners**.
 
-Target repository: `leo4384509/GaussLearner`  
-Target website: https://leo4384509.github.io/GaussLearner/
+## Visibility
+
+The repository leo4384509/GaussLearner is private. Public deployment is disabled. The GitHub Pages workflow is removed, and scripts/publish_github.sh stops immediately without changing GitHub or uploading files. Keep this state until the owner explicitly requests publication.
 
 ## Preview
 
@@ -11,33 +12,17 @@ Target website: https://leo4384509.github.io/GaussLearner/
 python3 -m http.server 8873 --directory /data/gxlh_data/Surmount/GaussLearner
 ```
 
-No dependency installation, CDN, backend or build is required. Assets use relative paths and support the `/GaussLearner/` subdirectory.
+For a preview accessible only on the server itself, add --bind 127.0.0.1 and use an SSH tunnel. The existing preview uses the server's private network address so the owner can review it in the app.
 
-## Publish
+No dependency installation, CDN, backend or build is required. Assets use relative paths.
 
-GitHub CLI is installed locally at `/home/gxlh/.local/bin/gh`, without sudo. Run:
+## Content and maintenance
 
-```bash
-bash /data/gxlh_data/Surmount/GaussLearner/scripts/publish_github.sh
-```
+The repository contains website assets only: no algorithm code, datasets, checkpoints, manuscript sources or manuscript PDFs. Paper and Code remain placeholders. No arXiv identifier or conference venue has been invented.
 
-The script starts browser login if needed; authorize as `leo4384509`. It then creates an empty public repository if necessary, enables GitHub Pages with Actions, and pushes main. It stops for a different authenticated account or existing remote content. The workflow stages only index.html, CSS, JavaScript, citation.bib, .nojekyll and assets.
+- scripts/build_page.py exports manuscript figures, captions and three main result tables. Requires Python 3, Pillow, Poppler and ../Paper/arxiv_camera_v1, or an explicit manuscript directory argument.
+- scripts/build_public_video.py prepares the title card and video. Requires Python 3, Pillow, FFmpeg and original assets in the parent workspace. The publicity filename denotes intended future use; the file is not currently published.
+- assets/figures/manifest.json records figure provenance and captions.
+- ASSETS.md documents video processing and attribution.
 
-Alternatively create an empty public GaussLearner repository under leo4384509, push this directory's main branch, and select Settings → Pages → Source → GitHub Actions.
-
-This repository contains website assets only: no algorithm code, datasets, checkpoints, manuscript sources or manuscript PDFs.
-
-## Update arXiv and citation
-
-Replace the disabled Paper button in index.html with an anchor to the verified arXiv URL, preserving class resource and removing its Coming Soon badge. Add the verified identifier and URL to citation.bib and the #bibtex block. Keep scripts/build_page.py synchronized if regenerating the page.
-
-The current @misc citation includes the confirmed title, authors and year without inventing an arXiv ID or conference venue. Code remains Coming Soon until release is authorized.
-
-## Regeneration
-
-- scripts/build_page.py exports manuscript figures, captions and the three main result tables. Requires Python 3, Pillow, Poppler and ../Paper/arxiv_camera_v1, or an explicit manuscript directory argument.
-- scripts/build_public_video.py prepares the title card and publicity video. Requires Python 3, Pillow, FFmpeg and the original assets in the parent workspace.
-- assets/figures/manifest.json records figure source paths and captions.
-- ASSETS.md documents video processing and music attribution.
-
-Preparation scripts are not needed by visitors or GitHub Actions.
+Preparation scripts are not required to view the local website.
