@@ -1,0 +1,106 @@
+[
+  {
+    "id": "teaser",
+    "source": "figures/teaser/teaser_vector_1108_charts_view_clean.pdf",
+    "output": "assets/figures/teaser.webp",
+    "caption": "Continual 3D Gaussian reconstruction across evolving scene states. Directly fine-tuning an existing Gaussian field leads to catastrophic forgetting of previously reconstructed regions, while selective local optimization methods struggle to balance adaptation with preservation. GaussLearner reconstructs both changed and unchanged regions and improves reconstruction quality across datasets.",
+    "width": 2400,
+    "height": 933
+  },
+  {
+    "id": "paradigm",
+    "source": "figures/method_compare/paradigm_1105_outlined.pdf",
+    "output": "assets/figures/paradigm.webp",
+    "caption": "Comparison of 3D Gaussian continual learning paradigms. (a) Existing methods treat Gaussians as update targets. Replay and regularization may retain obsolete content or hinder adaptation, while selective local optimization can propagate 2D detection errors into 3D updates. (b) GaussLearner instead views each Gaussian primitive as a continual learner equipped with a closed learning loop.",
+    "width": 2400,
+    "height": 1433
+  },
+  {
+    "id": "framework",
+    "source": "figures/overview_white_bg_2_compatible.pdf",
+    "output": "assets/figures/framework.webp",
+    "caption": "Framework of GaussLearner. Each Gaussian acts as a stateful continual learner with scene parameters and cross-state reliability. At each scene state, pixel-wise inconsistencies in current observations are attributed to their contributing Gaussians. Each Gaussian then self-regulates through a per-Gaussian learning weight that balances current observations against cross-state reliability. This weight governs both parameter adaptation and optimizer-memory refresh. Cross-state reliability is updated at state boundaries using resolved pressure and final support. The resulting field is a globally coupled population of locally self-regulating continual learners.",
+    "width": 2400,
+    "height": 1080
+  },
+  {
+    "id": "cl3d-comparison",
+    "source": "figures/comparison/comparison_main.pdf",
+    "output": "assets/figures/cl3d-comparison.webp",
+    "caption": "Qualitative comparisons on CL-3D. From top to bottom are ClubRoom, Fridge, OfficeHub, and StudyNook. GaussLearner adapts to revised content while preserving still-valid regions, with less forgetting and fewer reconstruction artifacts.",
+    "width": 2400,
+    "height": 1209
+  },
+  {
+    "id": "other-comparison",
+    "source": "figures/comparison/comparison_detailed.pdf",
+    "output": "assets/figures/other-comparison.webp",
+    "caption": "Qualitative comparisons on WAT and CL-Splats. From top to bottom are Grill, Car, Cupboard, and Desk. Red boxes and enlarged crops highlight how GaussLearner incorporates revised scene content while preserving surrounding content that remains valid.",
+    "width": 2400,
+    "height": 1355
+  },
+  {
+    "id": "adaptation-preservation",
+    "source": "figures/changed_unchanged_1031.pdf",
+    "output": "assets/figures/adaptation-preservation.webp",
+    "caption": "Comparison of adaptation and preservation. We report PSNR on changed and unchanged test views across all six scenes in the CL-3D dataset. Changed views measure adaptation to current observations, while unchanged views measure preservation of still-valid historical content.",
+    "width": 2400,
+    "height": 1322
+  },
+  {
+    "id": "learning-dynamics",
+    "source": "figures/pw_self_regulation_single_column.pdf",
+    "output": "assets/figures/learning-dynamics.webp",
+    "caption": "Within-state self-regulation. Mean pressure P and learning weight W over normalized update progress. Shading denotes standard error.",
+    "width": 2400,
+    "height": 1025
+  },
+  {
+    "id": "extra-cl3d-1",
+    "source": "figures/supplementary/cl3d_1.pdf",
+    "output": "assets/figures/extra-cl3d-1.webp",
+    "caption": "Qualitative comparisons on the CL-3D dataset (part 1 of 2).",
+    "width": 2315,
+    "height": 2400
+  },
+  {
+    "id": "extra-cl3d-2",
+    "source": "figures/supplementary/cl3d_2.pdf",
+    "output": "assets/figures/extra-cl3d-2.webp",
+    "caption": "Qualitative comparisons on the CL-3D dataset (part 2 of 2).",
+    "width": 2400,
+    "height": 1880
+  },
+  {
+    "id": "extra-clsplats",
+    "source": "figures/supplementary/CLSplats.pdf",
+    "output": "assets/figures/extra-clsplats.webp",
+    "caption": "Qualitative comparisons on the CL-Splats dataset.",
+    "width": 2400,
+    "height": 1270
+  },
+  {
+    "id": "extra-wat-1",
+    "source": "figures/supplementary/WAT_1.pdf",
+    "output": "assets/figures/extra-wat-1.webp",
+    "caption": "Qualitative comparisons on the WAT dataset (part 1 of 2).",
+    "width": 2315,
+    "height": 2400
+  },
+  {
+    "id": "extra-wat-2",
+    "source": "figures/supplementary/WAT_2.pdf",
+    "output": "assets/figures/extra-wat-2.webp",
+    "caption": "Qualitative comparisons on the WAT dataset (part 2 of 2).",
+    "width": 2315,
+    "height": 2400
+  },
+  {
+    "id": "extra-dynamics",
+    "source": "figures/supplementary/rpw_dynamics_3datasets.pdf",
+    "output": "assets/figures/extra-dynamics.webp",
+    "caption": "Learning dynamics on three datasets. (a) to (c) Mean pressure P and learning weight W against normalized adaptation progress. Shading denotes standard error across updates. (d) to (f) Mean reliability R before and after renewal at each state boundary. Error bars denote standard error across scenes. For CL-3D, we include nine updates from ClubRoom, Fridge, and OfficeHub. For CL-Splats and WAT, we include four and sixteen updates, respectively.",
+    "width": 2400,
+    "height": 1351
+  }
+]
