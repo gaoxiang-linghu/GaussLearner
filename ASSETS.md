@@ -2,7 +2,7 @@
 
 ## Manuscript
 
-All 13 displayed figures are exported from Paper/arxiv_camera_v1/figures/. Exact PDF paths, captions and output dimensions are in assets/figures/manifest.json. The three result tables are generated from sec/4_experiments.tex, retaining numerical values and bold/underline emphasis. LaTeX citation markers are omitted in captions.
+All 11 displayed figures are exported from Paper/arxiv_camera_v1/figures/. Exact PDF paths, captions and output dimensions are in assets/figures/manifest.json. The three result tables are generated from sec/4_experiments.tex, retaining numerical values and bold/underline emphasis. LaTeX citation markers are omitted in captions. Figure exports use the PDF’s authored CropBox, matching the crop used by LaTeX, rather than the larger MediaBox. This removes only material outside the existing crop; no comparison content or labels are edited.
 
 ## Author links and affiliations
 
