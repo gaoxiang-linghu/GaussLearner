@@ -15,13 +15,13 @@ No dependency installation, CDN, backend or build is required. Assets use relati
 
 ## Publish
 
-Authenticate GitHub CLI as `leo4384509`, then run:
+GitHub CLI is installed locally at `/home/gxlh/.local/bin/gh`, without sudo. Run:
 
 ```bash
 bash /data/gxlh_data/Surmount/GaussLearner/scripts/publish_github.sh
 ```
 
-The script creates an empty public repository if necessary, enables GitHub Pages with Actions, and pushes main. It stops for a different authenticated account or existing remote content. The workflow stages only index.html, CSS, JavaScript, citation.bib, .nojekyll and assets.
+The script starts browser login if needed; authorize as `leo4384509`. It then creates an empty public repository if necessary, enables GitHub Pages with Actions, and pushes main. It stops for a different authenticated account or existing remote content. The workflow stages only index.html, CSS, JavaScript, citation.bib, .nojekyll and assets.
 
 Alternatively create an empty public GaussLearner repository under leo4384509, push this directory's main branch, and select Settings → Pages → Source → GitHub Actions.
 

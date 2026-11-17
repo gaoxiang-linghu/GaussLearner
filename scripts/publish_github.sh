@@ -1,7 +1,26 @@
 #!/usr/bin/env bash
 set -euo pipefail
+export PATH="$HOME/.local/bin:$PATH"
 cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.."
+# Ignore an inherited localhost proxy only when its listener is unavailable.
+if ! python3 - <<'PY'
+import os, socket, sys
+from urllib.parse import urlparse
+value = os.environ.get('HTTPS_PROXY') or os.environ.get('https_proxy', '')
+u = urlparse(value)
+if u.hostname in ('localhost', '127.0.0.1', '::1'):
+    try:
+        socket.create_connection((u.hostname, u.port or 80), timeout=1).close()
+    except OSError:
+        sys.exit(1)
+PY
+then
+  unset HTTP_PROXY HTTPS_PROXY ALL_PROXY http_proxy https_proxy all_proxy
+fi
 command -v gh >/dev/null || { echo 'Install GitHub CLI and authenticate as leo4384509 first.' >&2; exit 1; }
+if ! gh auth status --hostname github.com >/dev/null 2>&1; then
+  gh auth login --hostname github.com --git-protocol https --web --scopes repo,workflow
+fi
 account=$(gh api user --jq .login)
 [[ "$account" == leo4384509 ]] || { echo "Expected leo4384509; current account: $account" >&2; exit 1; }
 repo=leo4384509/GaussLearner
