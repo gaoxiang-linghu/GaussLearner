@@ -1,10 +1,20 @@
-# GaussLearner — private preview
+# GaussLearner project website
 
-Static website for **GaussLearner: 3D Gaussian Primitives as Self-Regulating Continual Learners**.
+**GaussLearner: 3D Gaussian Primitives as Self-Regulating Continual Learners**
 
-## Visibility
+Official website: https://gaoxiang-linghu.github.io/GaussLearner/
 
-The repository gaoxiang-linghu/GaussLearner is private. Public deployment is disabled. The GitHub Pages workflow is removed, and scripts/publish_github.sh stops immediately without changing GitHub or uploading files. Keep this state until the owner explicitly requests publication.
+## Authors
+
+Gaoxiang Linghu, Haonan Zhou, Xuanhe Liu, Weili Xu, Kaiyue Zhou*, Jun Xiao, Gaoang Wang*.
+
+*Corresponding authors: Kaiyue Zhou and Gaoang Wang.*
+
+Affiliations follow the paper. The website and publicity video title card reflect the authors' updated correspondence designation.
+
+## Website content
+
+This repository contains only website source and presentation assets. No algorithm implementation, dataset, training checkpoint, manuscript PDF or manuscript LaTeX source is included. Paper and Code are placeholders until those resources are released.
 
 ## Preview
 
@@ -12,17 +22,17 @@ The repository gaoxiang-linghu/GaussLearner is private. Public deployment is dis
 python3 -m http.server 8873 --directory /data/gxlh_data/Surmount/GaussLearner
 ```
 
-For a preview accessible only on the server itself, add --bind 127.0.0.1 and use an SSH tunnel. The existing preview uses the server's private network address so the owner can review it in the app.
+For remote preview, forward port 8873 over SSH. The static page needs no dependencies or build step.
 
-No dependency installation, CDN, backend or build is required. Assets use relative paths.
+## Deployment
 
-## Content and maintenance
+The included GitHub Actions workflow stages only HTML, CSS, JavaScript, citation.bib, .nojekyll and assets. Repository visibility is not changed by any script. Publishing the repository and enabling GitHub Pages require an explicit owner decision.
 
-The repository contains website assets only: no algorithm code, datasets, checkpoints, manuscript sources or manuscript PDFs. Paper and Code remain placeholders. No arXiv identifier or conference venue has been invented.
+The standalone helper does not upload files or change visibility. GitHub Pages is configured for this repository, and pushes to main deploy reviewed website updates automatically.
 
-- scripts/build_page.py exports manuscript figures, captions and three main result tables. Requires Python 3, Pillow, Poppler and ../Paper/arxiv_camera_v1, or an explicit manuscript directory argument.
-- scripts/build_public_video.py prepares the title card and video. Requires Python 3, Pillow, FFmpeg and original assets in the parent workspace. The publicity filename denotes intended future use; the file is not currently published.
-- assets/figures/manifest.json records figure provenance and captions.
-- ASSETS.md documents video processing and attribution.
+## Asset preparation
 
-Preparation scripts are not required to view the local website.
+- scripts/build_page.py: exports paper figures using their authored PDF CropBox, extracts captions and the three main result tables. Requires Python 3, Pillow, Poppler and the local manuscript directory, which is not included in this repository.
+- scripts/build_public_video.py: replaces the four-second title card and retains the submission video's soundtrack and comparison content. Requires Python 3, Pillow, FFmpeg and the original local video, which is not included here.
+- assets/figures/manifest.json: figure provenance and captions.
+- ASSETS.md: video processing and attribution.

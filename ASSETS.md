@@ -6,7 +6,7 @@ All 11 displayed figures are exported from Paper/arxiv_camera_v1/figures/. Exact
 
 ## Author links and affiliations
 
-Gaoang Wang links to https://cvnext.github.io/ in the same text color as all other authors. Affiliations follow the manuscript. No institution logos or separate Minto wordmark are displayed on the website or publicity title card, following the user's latest instruction.
+Gaoang Wang links to https://cvnext.github.io/ in the same text color as all other authors. Affiliations follow the manuscript. Kaiyue Zhou and Gaoang Wang are marked as corresponding authors in the webpage and publicity title card, following the authors’ updated instruction. No institution logos or separate Minto wordmark are displayed on the website or publicity title card, following the user's latest instruction.
 
 ## Video
 

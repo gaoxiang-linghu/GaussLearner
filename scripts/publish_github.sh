@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-echo 'Public deployment is disabled. GaussLearner is private and preview-only.' >&2
-echo 'Preview: python3 -m http.server 8873 --directory /data/gxlh_data/Surmount/GaussLearner' >&2
+echo 'Deployment is managed by GitHub Actions for gaoxiang-linghu/GaussLearner.' >&2
+echo 'Commit reviewed website updates and push the main branch to deploy.' >&2
+echo 'This helper does not upload files or change repository visibility.' >&2
 exit 1
