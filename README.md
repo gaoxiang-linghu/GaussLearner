@@ -14,7 +14,7 @@ Affiliations follow the paper. The website and publicity video title card reflec
 
 ## Website content
 
-This repository contains only website source and presentation assets. No algorithm implementation, dataset, training checkpoint, manuscript PDF or manuscript LaTeX source is included. Paper and Code are placeholders until those resources are released.
+This repository contains only website source and presentation assets. No algorithm implementation, dataset, training checkpoint, manuscript PDF or manuscript LaTeX source is included. Paper links to https://arxiv.org/abs/2611.23736. Code remains a placeholder until release.
 
 ## Preview
 
