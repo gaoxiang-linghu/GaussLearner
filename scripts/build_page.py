@@ -94,7 +94,10 @@ citation='''@misc{linghu2026gausslearner,
   title  = {GaussLearner: 3D Gaussian Primitives as Self-Regulating Continual Learners},
   author = {Gaoxiang Linghu and Haonan Zhou and Xuanhe Liu and Weili Xu and
             Kaiyue Zhou and Jun Xiao and Gaoang Wang},
-  year   = {2026}
+  year   = {2026},
+  eprint = {2611.23736},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2611.23736}
 }'''
 (SITE/'citation.bib').write_text(citation+'\n')
 page='''<!doctype html>
